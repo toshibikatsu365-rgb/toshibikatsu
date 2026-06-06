@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>介護職を豊かに！もっと自由に。 | 専門コミュニティ</title>
-    <!-- 綺麗でモダンなデザインを簡単に適用できるスタイルシート（Tailwind CSS） -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -19,80 +19,213 @@
             }
         }
     </script>
-    <!-- Google Fontsから読みやすい日本語フォントを適用 -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Noto Sans JP', sans-serif; }
+        body { font-family: 'Noto Sans JP', sans-serif; scroll-behavior: smooth; }
+        .line-glow {
+            box-shadow: 0 4px 14px 0 rgba(46, 204, 113, 0.4);
+        }
     </style>
 </head>
-<body class="text-dark bg-orange-50/30">
+<body class="text-dark bg-orange-50/20">
 
     <!-- 1. ファーストビュー -->
-    <section class="relative bg-gradient-to-br from-orange-100 via-amber-50 to-emerald-50 py-16 md:py-28 overflow-hidden">
-        <!-- 背景の装飾（いきいきしたスタッフの画像が入る想定のプレースホルダー） -->
+    <section class="relative bg-gradient-to-br from-orange-100 via-amber-50 to-emerald-50 py-16 md:py-24 overflow-hidden">
         <div class="absolute inset-0 opacity-10 mix-blend-overlay bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1200&q=80');"></div>
         
         <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
-            <!-- メインキャッチコピー -->
             <h1 class="text-3xl md:text-5xl font-bold text-dark leading-tight mb-6">
                 介護職を豊かに！<br class="md:hidden"><span class="text-primary">もっと自由に。</span>
             </h1>
-            
-            <!-- サブキャッチコピー -->
             <p class="text-base md:text-xl text-gray-600 font-medium max-w-3xl mx-auto mb-10 leading-relaxed">
                 スキマ時間の副業から、理想の転職・派遣まで。<br class="hidden md:inline">あなたのキャリアを最大化する専門コミュニティ
             </p>
-            
-            <!-- CTAボタン -->
             <div class="mb-4">
-                <a href="#line-register" class="inline-block bg-secondary hover:bg-emerald-600 text-white font-bold text-lg md:text-xl px-8 py-4 rounded-full shadow-lg transform hover:-translate-y-0.5 transition-all duration-200">
-                    【無料】LINEでカンタン10秒登録！<br class="md:hidden">案件・コミュニティに参加する
+                <a href="#jobs-section" class="inline-block bg-secondary hover:bg-emerald-600 text-white font-bold text-lg md:text-xl px-10 py-4 rounded-full shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 line-glow">
+                    【無料】掲載中の案件を見に行く 👇
                 </a>
             </div>
-            <p class="text-xs text-gray-500">※強引な勧誘などは一切ありませんのでご安心ください</p>
+            <p class="text-xs text-gray-500">※登録前に実際の案件をチェックできます</p>
         </div>
     </section>
 
     <!-- 2. ベネフィットセクション -->
-    <section class="py-16 md:py-24 max-w-6xl mx-auto px-4">
-        <div class="text-center mb-12 md:mb-16">
+    <section class="py-12 md:py-16 max-w-6xl mx-auto px-4">
+        <div class="text-center mb-10">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-800 border-b-4 border-primary inline-block pb-2">
                 当コミュニティが選ばれる3つの理由
             </h2>
         </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- ベネフィット① -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-orange-100 text-center">
+                <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4 mx-auto text-primary text-xl font-bold">01</div>
+                <h3 class="text-lg font-bold mb-3 text-gray-800">今までの経験を<br>もっと活かそう！</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    現場で培ったスキルは他でも求められています。あなたの価値を正当に評価する場所で収入アップを目指しましょう。
+                </p>
+            </div>
+            <!-- ベネフィット② -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-orange-100 text-center">
+                <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4 mx-auto text-secondary text-xl font-bold">02</div>
+                <h3 class="text-lg font-bold mb-3 text-gray-800">同じ悩みを持つ仲間と<br>繋がるコミュニティ</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    現場の悩みやキャリアを本音で話せる限定空間。愚痴から新しい働き方の相談まで心強い繋がりが作れます。
+                </p>
+            </div>
+            <!-- ベネフィット③ -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-orange-100 text-center">
+                <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mb-4 mx-auto text-amber-500 text-xl font-bold">03</div>
+                <h3 class="text-lg font-bold mb-3 text-gray-800">あなたに合った<br>最適な案件をご紹介</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    スキマ副業、ライフスタイルに合わせた派遣、キャリアアップの紹介求人など、希望に寄り添い厳選します。
+                </p>
+            </div>
+        </div>
+    </section>
 
-        <!-- 3つのカード並び（レスポンシブ対応） -->
+    <!-- 3. お悩み共感セクション -->
+    <section class="bg-orange-50/50 py-12 md:py-16">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800">こんなお悩み、ありませんか？</h2>
+            </div>
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-orange-100 space-y-4">
+                <div class="flex items-start gap-3">
+                    <span class="text-red-500 font-bold text-xl">✔</span>
+                    <p class="text-gray-700 font-medium text-sm md:text-base">今の収入にプラスαで副業を始めたいけれど、良い案件が見つからない</p>
+                </div>
+                <div class="flex items-start gap-3">
+                    <span class="text-red-500 font-bold text-xl">✔</span>
+                    <p class="text-gray-700 font-medium text-sm md:text-base">シフトの融通が利く派遣や、もっと条件の良い紹介案件を探している</p>
+                </div>
+                <div class="flex items-start gap-3">
+                    <span class="text-red-500 font-bold text-xl">✔</span>
+                    <p class="text-gray-700 font-medium text-sm md:text-base">職場の人間関係やキャリアについて、気軽に相談できる仲間が欲しい</p>
+                </div>
+                <div class="flex items-start gap-3">
+                    <span class="text-red-500 font-bold text-xl">✔</span>
+                    <p class="text-gray-700 font-medium text-sm md:text-base">せっかく持っている資格や介護の経験を、もっと自由で高単価な働き方に活かしたい</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. 案件一覧セクション（ここから詳細・LINE誘導へ飛べる） -->
+    <section id="jobs-section" class="py-12 md:py-20 max-w-6xl mx-auto px-4">
+        <div class="text-center mb-10">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800">現在掲載中の案件・求人例</h2>
+            <p class="text-sm text-gray-500 mt-2">※コミュニティ内ではさらに多くの非公開求人を掲載しています</p>
+        </div>
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             
-            <!-- ベネフィット① -->
-            <div class="bg-white rounded-2xl p-8 shadow-md border border-orange-100 flex flex-col items-center text-center">
-                <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6 text-primary text-2xl font-bold">01</div>
-                <h3 class="text-xl font-bold mb-4 text-gray-800">今までの経験を<br>もっと活かそう！</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">
-                    あなたが現場で培ってきた大切なスキルや知識は、もっと多くの場所で求められています。「今の職場だけ」にとどまらず、あなたの価値を正当に評価してくれる場所で、経験を最大限に発揮して収入アップに繋げましょう。
-                </p>
+            <!-- 案件①：副業 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 flex flex-col justify-between transform hover:scale-[1.02] transition-all duration-200">
+                <div>
+                    <div class="bg-orange-400 text-white text-xs font-bold px-3 py-1.5 inline-block m-4 rounded">
+                        副業・Wワーク
+                    </div>
+                    <div class="px-5 pb-5">
+                        <h3 class="text-lg font-bold text-gray-800 mb-3 leading-snug">
+                            【週末限定・オンライン可】介護スタッフ向けサイドビジネス・運営サポート
+                        </h3>
+                        <div class="space-y-2 text-sm border-t border-gray-100 pt-3">
+                            <div class="flex justify-between"><span class="text-gray-500">報酬</span><span class="font-bold text-primary">月収 5万〜10万円可</span></div>
+                            <div class="flex justify-between"><span class="text-gray-500">勤務地</span><span class="text-gray-700">在宅 / 一部施設</span></div>
+                            <div class="flex justify-between"><span class="text-gray-500">条件</span><span class="text-gray-700">初任者研修以上歓迎</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-5 pb-5">
+                    <a href="#line-section" class="block text-center bg-secondary hover:bg-emerald-600 text-white font-bold py-3 rounded-xl transition-colors">
+                        この案件の詳細を見る ➔
+                    </a>
+                </div>
             </div>
 
-            <!-- ベネフィット② -->
-            <div class="bg-white rounded-2xl p-8 shadow-md border border-orange-100 flex flex-col items-center text-center">
-                <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6 text-secondary text-2xl font-bold">02</div>
-                <h3 class="text-xl font-bold mb-4 text-gray-800">同じ悩みを持つ仲間と<br>繋がるコミュニティ</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">
-                    介護の現場ならではの悩みやキャリアの相談を、気軽に本音で話し合える「医療・介護専門」の限定コミュニティです。愚痴を言い合える仲間から、新しい働き方に挑戦する仲間まで、心強い横のつながりが作れます。
-                </p>
+            <!-- 案件②：人材派遣 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 flex flex-col justify-between transform hover:scale-[1.02] transition-all duration-200">
+                <div>
+                    <div class="bg-emerald-500 text-white text-xs font-bold px-3 py-1.5 inline-block m-4 rounded">
+                        人材派遣
+                    </div>
+                    <div class="px-5 pb-5">
+                        <h3 class="text-lg font-bold text-gray-800 mb-3 leading-snug">
+                            【週3日〜・日勤のみOK】シフトの融通抜群！特別養護老人ホームでの介護派遣
+                        </h3>
+                        <div class="space-y-2 text-sm border-t border-gray-100 pt-3">
+                            <div class="flex justify-between"><span class="text-gray-500">給与</span><span class="font-bold text-emerald-600">時給 1,500円〜1,800円</span></div>
+                            <div class="flex justify-between"><span class="text-gray-500">勤務時間</span><span class="text-gray-700">8:30〜17:30（応相談）</span></div>
+                            <div class="flex justify-between"><span class="text-gray-500">勤務地</span><span class="text-gray-700">ご希望のエリアを考慮</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-5 pb-5">
+                    <a href="#line-section" class="block text-center bg-secondary hover:bg-emerald-600 text-white font-bold py-3 rounded-xl transition-colors">
+                        この案件の詳細を見る ➔
+                    </a>
+                </div>
             </div>
 
-            <!-- ベネフィット③ -->
-            <div class="bg-white rounded-2xl p-8 shadow-md border border-orange-100 flex flex-col items-center text-center">
-                <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-6 text-amber-500 text-2xl font-bold">03</div>
-                <h3 class="text-xl font-bold mb-4 text-gray-800">あなたに合った<br>最適な案件をご紹介</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">
-                    「月数万円のスキマ副業」「ライフスタイルに合わせた派遣」「ステップアップのための人材紹介」など、あなたのライフステージや希望に寄り添った案件を厳選してご案内します。
-                </p>
+            <!-- 案件③：人材紹介（正社員） -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 flex flex-col justify-between transform hover:scale-[1.02] transition-all duration-200">
+                <div>
+                    <div class="bg-blue-500 text-white text-xs font-bold px-3 py-1.5 inline-block m-4 rounded">
+                        人材紹介（正社員）
+                    </div>
+                    <div class="px-5 pb-5">
+                        <h3 class="text-lg font-bold text-gray-800 mb-3 leading-snug">
+                            【管理者候補・オープニング】新規施設立ち上げメンバー募集（キャリアアップ求人）
+                        </h3>
+                        <div class="space-y-2 text-sm border-t border-gray-100 pt-3">
+                            <div class="flex justify-between"><span class="text-gray-500">想定年収</span><span class="font-bold text-blue-600">年収 450万〜550万円</span></div>
+                            <div class="flex justify-between"><span class="text-gray-500">休日</span><span class="text-gray-700">完全週休2日制（シフト）</span></div>
+                            <div class="flex justify-between"><span class="text-gray-500">必須要件</span><span class="text-gray-700">介護福祉士 / 実務経験3年以上</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-5 pb-5">
+                    <a href="#line-section" class="block text-center bg-secondary hover:bg-emerald-600 text-white font-bold py-3 rounded-xl transition-colors">
+                        この案件の詳細を見る ➔
+                    </a>
+                </div>
             </div>
 
         </div>
     </section>
+
+    <!-- 5. LINE登録・クロージングセクション -->
+    <section id="line-section" class="bg-gradient-to-b from-emerald-50 to-orange-50/30 py-16 text-center">
+        <div class="max-w-2xl mx-auto px-4">
+            <div class="bg-white p-8 rounded-3xl shadow-xl border border-emerald-100">
+                <span class="bg-red-100 text-red-600 font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider">
+                    簡単10秒・完全無料
+                </span>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-3 mb-4">
+                    詳細の確認・コミュニティへの参加は<br>公式LINEから！
+                </h2>
+                <p class="text-gray-600 text-sm md:text-base mb-8 leading-relaxed">
+                    現在、応募やお問い合わせは公式LINEにて一括受付しています。<br>
+                    友だち追加後、自動で届くメッセージから希望の案件番号をお伝えいただくか、キャリア相談をご利用いただけます。
+                </p>
+                
+                <!-- 実際のLINEリンクに置き換えるボタン -->
+                <div class="mb-4">
+                    <a href="https://line.me/R/ti/p/YOUR_LINE_ID" target="_blank" class="inline-block bg-[#06C755] hover:bg-[#05b34c] text-white font-bold text-lg md:text-xl px-8 py-4 rounded-full shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 w-full md:w-auto">
+                        💬 LINE友だち追加で案件詳細を見る
+                    </a>
+                </div>
+                <p class="text-xs text-gray-400">※ボタンを押すとLINEアプリが開きます</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="bg-white py-6 border-t border-gray-100 text-center text-xs text-gray-400">
+        <p>&copy; 2026 介護職専門コミュニティ All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
