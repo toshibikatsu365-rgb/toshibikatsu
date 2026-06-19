@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>稼げる環境の説明 | ユアハーツ コミュニティ</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#ff914d',
+                            green: '#89c541',
+                            navy: '#1a2e40',
+                            accent: '#fabd00',
+                            bgLight: '#fcfcfc',
+                            border: '#e2e8f0'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #fafbfc;
+        }
+        .nav-link.active-tab {
+            color: #ff914d;
+            border-bottom: 2px solid #ff914d;
+        }
+        .conic-chart {
+            background: conic-gradient(#ff914d 0% 20%, #89c541 20% 30%, #1a2e40 30% 100%);
+        }
+    </style>
+</head>
+<body class="text-gray-800 leading-relaxed flex flex-col min-h-screen">
+
+    <!-- ヘッダー -->
+    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-brand-border shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <svg class="w-12 h-12" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="28" cy="25" r="8" fill="#89c541" />
+                    <path d="M42 35C28 32 15 45 20 68C23 80 38 90 50 95C40 85 36 70 42 55C45 48 48 40 42 35Z" fill="#89c541" />
+                    <circle cx="72" cy="25" r="8" fill="#ff914d" />
+                    <path d="M58 35C72 32 85 45 80 68C77 80 62 90 50 95C60 85 64 70 58 55C55 48 52 40 58 35Z" fill="#ff914d" />
+                    <path d="M50 75C42 65 42 52 50 45C58 52 58 65 50 75Z" fill="url(#header-mini-heart)" />
+                    <defs>
+                        <linearGradient id="header-mini-heart" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0%" stop-color="#89c541" />
+                            <stop offset="100%" stop-color="#ff914d" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <div>
+                    <h1 class="text-lg font-black text-brand-navy leading-none">ユアハーツ</h1>
+                    <span class="text-xs font-bold text-brand-orange tracking-widest">コミュニティ</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="nav-link py-2 text-sm font-black text-brand-navy hover:text-brand-orange transition-colors tracking-wider">1. ホーム</a>
+                <a href="system.html" class="nav-link active-tab py-2 text-sm font-black text-brand-navy hover:text-brand-orange transition-colors tracking-wider">2. 稼げる環境の説明</a>
+                <a href="jobs.html" class="nav-link py-2 text-sm font-black text-brand-navy hover:text-brand-orange transition-colors tracking-wider">3. 案件一覧</a>
+            </nav>
+            <div class="flex items-center gap-2">
+                <a href="#contact" class="bg-gradient-to-r from-brand-orange to-red-500 text-white font-black text-xs px-4 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">説明会に参加する</a>
+                <button onclick="toggleMobileMenu()" class="md:hidden text-brand-navy p-2 text-xl focus:outline-none">
+                    <i id="menu-icon" class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-brand-border">
+            <div class="flex flex-col p-4 gap-3">
+                <a href="index.html" class="text-left py-2 text-sm font-black text-brand-navy hover:text-brand-orange">1. ホーム</a>
+                <a href="system.html" class="text-left py-2 text-sm font-black text-brand-orange">2. 稼げる環境の説明</a>
+                <a href="jobs.html" class="text-left py-2 text-sm font-black text-brand-navy hover:text-brand-orange">3. 案件一覧</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- 導入全体像 -->
+        <div class="bg-gradient-to-b from-[#fffaf4] to-[#f4f8fa] py-16 px-4 text-center relative overflow-hidden border-b border-brand-border">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-black text-brand-navy mb-6">想いを正当な経済的対価へ変える仕組み</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
+                    一般的な紹介会社の高い手数料を、ユアハーツ コミュニティでは適切に設定し、<br class="hidden md:inline">
+                    利益の多くを「紹介に関わったメンバー本人」や「コミュニティ全員」に直接還元しています。
+                </p>
+            </div>
+        </div>
+
+        <!-- 4ステップ -->
+        <div class="max-w-5xl mx-auto px-4 py-16">
+            <div class="text-center mb-12">
+                <h3 class="text-2xl font-black text-brand-navy mb-2">報酬獲得までの 4つのステップ</h3>
+                <div class="w-16 h-1 bg-brand-green mx-auto rounded"></div>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl border border-brand-border relative shadow-sm">
+                    <div class="absolute -top-3 -right-3 bg-brand-orange text-white w-8 h-8 rounded-full flex items-center justify-center font-black text-xs shadow-md">1</div>
+                    <h4 class="font-bold text-brand-navy mb-2">相談に乗る</h4>
+                    <p class="text-gray-600 text-xs">身近な介護・福祉にまつわる困りごとや、転職相談を親身に受け止めます。</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-brand-border relative shadow-sm">
+                    <div class="absolute -top-3 -right-3 bg-brand-orange text-white w-8 h-8 rounded-full flex items-center justify-center font-black text-xs shadow-md">2</div>
+                    <h4 class="font-bold text-brand-navy mb-2">相談者を紹介</h4>
+                    <p class="text-gray-600 text-xs">悩みを解決できるプロとして、ユアハーツ コミュニティへ相談者を繋ぎます。</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-brand-border relative shadow-sm">
+                    <div class="absolute -top-3 -right-3 bg-brand-orange text-white w-8 h-8 rounded-full flex items-center justify-center font-black text-xs shadow-md">3</div>
+                    <h4 class="font-bold text-brand-navy mb-2">依頼・成約</h4>
+                    <p class="text-gray-600 text-xs">求人を探している企業と相談者がしっかり対話し、仕事を依頼・承諾します。</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-brand-border relative shadow-sm">
+                    <div class="absolute -top-3 -right-3 bg-brand-orange text-white w-8 h-8 rounded-full flex items-center justify-center font-black text-xs shadow-md">4</div>
+                    <h4 class="font-bold text-brand-navy mb-2">報酬の受け取り</h4>
+                    <p class="text-gray-600 text-xs">成約が決定した際、紹介に関わった対価として紹介報酬が支払われます。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 具体的な還元額 -->
+        <div class="bg-gray-100 border-t border-b border-brand-border py-16 px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-10">
+                    <h3 class="text-2xl font-black text-brand-navy mb-2">具体的な 紹介報酬例</h3>
+                    <p class="text-xs text-gray-500 mt-1">※高騰する福祉採用コストを直接還元</p>
+                </div>
+
+                <div class="bg-white border border-brand-border rounded-2xl p-6 md:p-10 shadow-md">
+                    <div class="text-center mb-6">
+                        <span class="bg-brand-navy text-white font-bold text-xs px-4 py-1.5 rounded-full inline-block mb-3">年収350万円の福祉・介護職員を採用する場合</span>
+                        <div class="text-gray-500 text-sm">通常の採用コスト：約105万円 (年収の30%が相場)</div>
+                        <div class="text-brand-navy font-black text-sm md:text-base mt-2">ユアハーツ コミュニティは、成約費用を「売上の 20%」に優良設定。</div>
+                    </div>
+
+                    <div class="bg-orange-50 border border-orange-100 p-6 rounded-xl text-center">
+                        <span class="text-sm font-bold text-brand-orange block">成約売上 700,000円のうち</span>
+                        <div class="text-4xl md:text-6xl font-black text-brand-orange my-3">
+                            140,000<span class="text-2xl ml-1">円</span>
+                        </div>
+                        <p class="text-sm text-brand-navy font-bold">【売上の20%】をご紹介者様（あなた）へ直接還元！</p>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-4 leading-relaxed text-center">
+                        副収入が欲しい方、あるいは独立してすぐに十分な案件のない場合、ユアハーツ コミュニティが仕事案件を直接提供いたします。広告会社を挟まないからこそ可能な、最高峰の還元率です。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 分配システム -->
+        <div class="max-w-5xl mx-auto px-4 py-16">
+            <div class="text-center mb-12">
+                <h3 class="text-2xl font-black text-brand-navy mb-2">全員で豊かになる 分配システム</h3>
+                <div class="w-16 h-1 bg-brand-green mx-auto rounded"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div class="flex justify-center">
+                    <div class="chart-visual w-72 h-72 rounded-full conic-chart flex items-center justify-center relative shadow-lg">
+                        <div class="absolute w-44 h-44 bg-white rounded-full flex flex-col items-center justify-center">
+                            <span class="text-xs font-bold text-gray-500 tracking-wider">報酬の行先</span>
+                            <span class="text-base font-black text-brand-navy mt-1">分配比率</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <span class="w-5 h-5 rounded bg-brand-orange mt-1 shrink-0"></span>
+                            <div>
+                                <strong class="text-brand-navy text-sm md:text-base">ご紹介者様本人 (あなた)：売上の 20% (140,000円)</strong>
+                                <p class="text-gray-600 text-xs mt-1">相談に乗り、実際に紹介を繋いでくださった方へのダイレクトな成果報酬。</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="w-5 h-5 rounded bg-brand-green mt-1 shrink-0"></span>
+                            <div>
+                                <strong class="text-brand-navy text-sm md:text-base">コミュニティ分配：売上の 10% (70,000円)</strong>
+                                <p class="text-gray-600 text-xs mt-1">成約時に生じる売上の10%は、メンバー全員で均等に分配します。自分が直接動けないときでも、お互いに支え合う仕組みです。</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="w-5 h-5 rounded bg-brand-navy mt-1 shrink-0"></span>
+                            <div>
+                                <strong class="text-brand-navy text-sm md:text-base">ユアハーツ コミュニティ事務局：残り 70%</strong>
+                                <p class="text-gray-600 text-xs mt-1">案件開拓、サポート対応、運営、教育セミナー開催などの持続的なコミュニティ運営に充当します。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 報酬受け取り条件 -->
+        <div class="max-w-4xl mx-auto px-4 pb-16">
+            <div class="bg-brand-navy text-white rounded-2xl p-6 md:p-10 shadow-lg">
+                <h3 class="text-lg md:text-xl font-black mb-6 text-center border-b border-white/20 pb-4"><i class="fa-solid fa-circle-exclamation text-brand-orange mr-2"></i>報酬を受け取るための条件</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <span class="bg-brand-orange text-white text-xs font-black px-3 py-1 rounded mb-3 inline-block">① 紹介料（20%）</span>
+                        <h4 class="font-bold text-sm mb-2">紹介した方の成約が発生した場合</h4>
+                        <p class="text-xs text-gray-300 leading-relaxed">適切な相談者をご紹介いただき、その方が案件先で成約（または就業開始）に至った場合、翌月末に支払われます。</p>
+                    </div>
+                    <div>
+                        <span class="bg-brand-green text-white text-xs font-black px-3 py-1 rounded mb-3 inline-block">② 分配金（10%）</span>
+                        <h4 class="font-bold text-sm mb-2">福祉従事者・学生等で、以下を満たす場合</h4>
+                        <ul class="text-xs text-gray-300 list-disc list-inside space-y-1.5 leading-relaxed">
+                            <li>福祉業界の従事者または学生であること</li>
+                            <li>本コミュニティセミナーに4回連続で出席していること</li>
+                            <li>または、紹介報酬の発生日から1年以内であること</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="text-center text-[10px] text-gray-400 mt-8">※紹介料、分配金はともに「月末締め翌月末日払い」となります。詳しくは説明会でお気軽にご質問ください。</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- お問い合わせ・お申し込みセクション -->
+    <section id="contact" class="bg-white border-t border-brand-border">
+        <div class="max-w-3xl mx-auto px-4 py-10">
+            <div class="text-center mb-8">
+                <h3 class="text-2xl font-black text-brand-navy mb-2">説明会・コミュニティのお申し込み</h3>
+                <div class="w-16 h-1 bg-brand-green mx-auto rounded"></div>
+            </div>
+            <div class="bg-[#fafbfc] border border-brand-border rounded-2xl p-6 md:p-10 shadow-sm">
+                <form onsubmit="handleSubmit(event)" class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-bold text-brand-navy mb-2">お名前 <span class="text-red-500 text-xs">必須</span></label>
+                        <input type="text" id="form-name" required placeholder="山田 太郎" class="w-full p-3.5 border border-brand-border rounded-xl focus:outline-none focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 bg-white transition-all text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-brand-navy mb-2">メールアドレス <span class="text-red-500 text-xs">必須</span></label>
+                        <input type="email" id="form-email" required placeholder="example@your-hearts.com" class="w-full p-3.5 border border-brand-border rounded-xl focus:outline-none focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 bg-white transition-all text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-brand-navy mb-2">お問い合わせ内容</label>
+                        <textarea id="form-message" rows="5" placeholder="5/10(日)のセミナー説明会へ参加希望、などをご記入ください。" class="w-full p-3.5 border border-brand-border rounded-xl focus:outline-none focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 bg-white transition-all text-sm"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-brand-orange to-red-500 text-white font-black p-4 rounded-xl shadow-md hover:opacity-95 transition-all text-base transform hover:-translate-y-0.5">メッセージを送信する</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="bg-brand-navy text-white/80 py-12 px-4 border-t border-brand-border">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3">
+                <svg class="w-16 h-16" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="28" cy="25" r="8" fill="#89c541" />
+                    <path d="M42 35C28 32 15 45 20 68C23 80 38 90 50 95C40 85 36 70 42 55C45 48 48 40 42 35Z" fill="#89c541" />
+                    <circle cx="72" cy="25" r="8" fill="#ff914d" />
+                    <path d="M58 35C72 32 85 45 80 68C77 80 62 90 50 95C60 85 64 70 58 55C55 48 52 40 58 35Z" fill="#ff914d" />
+                    <path d="M50 75C42 65 42 52 50 45C58 52 58 65 50 75Z" fill="url(#footer-mini-heart)" />
+                    <defs>
+                        <linearGradient id="footer-mini-heart" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0%" stop-color="#89c541" />
+                            <stop offset="100%" stop-color="#ff914d" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <div class="text-left border-l border-white/20 pl-4">
+                    <h5 class="text-white font-black text-base leading-none">ユアハーツ コミュニティ</h5>
+                    <p class="text-xs text-gray-400 mt-1.5">福祉の未来を共に創る、循環型プラットフォーム</p>
+                </div>
+            </div>
+            <div class="flex gap-6 text-xs font-bold text-gray-300">
+                <a href="index.html" class="hover:text-brand-orange">1. ホーム</a>
+                <a href="system.html" class="hover:text-brand-orange">2. 稼げる仕組み</a>
+                <a href="jobs.html" class="hover:text-brand-orange">3. 案件一覧</a>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto border-t border-white/10 mt-8 pt-6 text-center text-xs text-gray-500">
+            &copy; 2026 Your Hearts Community. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.className = "fa-solid fa-xmark";
+            } else {
+                menu.classList.add('hidden');
+                icon.className = "fa-solid fa-bars";
+            }
+        }
+
+        function handleSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('form-name').value;
+            showToast(`${name}様、お申し込みありがとうございます。事務局より追ってご連絡いたします！`);
+            e.target.reset();
+        }
+
+        function showToast(text) {
+            const toast = document.createElement('div');
+            toast.className = "fixed bottom-5 right-5 bg-brand-navy border-l-4 border-brand-green text-white px-6 py-4 rounded-xl shadow-2xl z-50 transition-all transform translate-y-10 opacity-0 max-w-sm text-sm font-bold";
+            toast.innerText = text;
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.classList.remove('translate-y-10', 'opacity-0');
+            }, 100);
+
+            setTimeout(() => {
+                toast.classList.add('translate-y-10', 'opacity-0');
+                setTimeout(() => toast.remove(), 400);
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
