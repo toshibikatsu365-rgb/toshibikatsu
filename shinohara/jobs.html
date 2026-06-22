@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ユアハーツ コミュニティの案件一覧。副業、派遣、転職、紹介案件、企業向けサービスを掲載。">
+    <title>案件一覧 | ユアハーツ コミュニティ</title>
+    <link rel="icon" href="assets/your-hearts-logo.webp" type="image/webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/site.css">
+    <script type="module" src="scripts/app.js?v=seo1"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html"><img data-logo src="assets/your-hearts-logo.webp" alt="介護の総合スクール ユアハーツ"></a>
+        <nav class="nav" aria-label="主要ナビゲーション">
+          <a href="index.html">ユアハーツセミナーとは</a>
+          <a href="jobs.html">案件一覧</a>
+          <a href="contact.html">お問合せ</a>
+          <a href="company.html">会社概要</a>
+        </nav>
+        <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="メニューを開く">≡</button>
+      </div>
+      <nav class="mobile-menu" id="mobileMenu" aria-label="モバイルナビゲーション">
+        <a href="index.html">ユアハーツセミナーとは</a>
+        <a href="jobs.html">案件一覧</a>
+        <a href="contact.html">お問合せ</a>
+        <a href="company.html">会社概要</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="section-inner">
+          <p class="section-kicker">Listings</p>
+          <h1>案件一覧</h1>
+          <p>いま見てもらいたい案件を上部に流しながら、全案件を対象・カテゴリで絞り込めます。</p>
+        </div>
+      </section>
+
+      <section class="pickup-section" aria-label="ピックアップ案件">
+        <div class="pickup-head">
+          <span>Pickup</span>
+          <strong>注目案件</strong>
+        </div>
+        <div class="pickup-marquee">
+          <div class="pickup-track" id="pickupTrack"></div>
+        </div>
+      </section>
+
+      <section class="section" id="jobs">
+        <div class="section-inner">
+          <div class="job-toolbar">
+            <div class="section-head">
+              <p class="section-kicker">All Listings</p>
+              <h2>掲載中の案件</h2>
+              <p class="muted">掲載案件は増減に合わせて自動で再配置されます。気になる案件はお問合せください。</p>
+            </div>
+            <div class="job-count" id="jobCount" aria-live="polite"></div>
+          </div>
+          <div class="job-filters" id="jobFilters"></div>
+          <div class="jobs-grid" id="jobsGrid"></div>
+        </div>
+      </section>
+
+      <div class="job-modal" id="jobModal" aria-hidden="true">
+        <div class="job-modal__backdrop" data-close-job-modal></div>
+        <article class="job-modal__panel" role="dialog" aria-modal="true" aria-labelledby="jobModalTitle">
+          <button class="job-modal__close" type="button" data-close-job-modal aria-label="詳細を閉じる">×</button>
+          <div id="jobModalContent"></div>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="brand" href="index.html"><img data-logo src="assets/your-hearts-logo.webp" alt="介護の総合スクール ユアハーツ"></a>
+        <div class="footer-links">
+          <a href="index.html">ユアハーツセミナーとは</a>
+          <a href="contact.html">お問合せ</a>
+          <a href="company.html">会社概要</a>
+          <a data-line-link href="#" target="_blank" rel="noopener">LINE</a>
+          <a data-x-link href="#" target="_blank" rel="noopener">X</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

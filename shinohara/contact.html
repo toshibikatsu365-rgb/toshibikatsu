@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ユアハーツ コミュニティへのお問合せ。LINE、X、メールフォームから相談できます。">
+    <title>お問合せ | ユアハーツ コミュニティ</title>
+    <link rel="icon" href="assets/your-hearts-logo.webp" type="image/webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/site.css">
+    <script type="module" src="scripts/app.js?v=seo1"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html"><img data-logo src="assets/your-hearts-logo.webp" alt="介護の総合スクール ユアハーツ"></a>
+        <nav class="nav" aria-label="主要ナビゲーション">
+          <a href="index.html">ユアハーツセミナーとは</a>
+          <a href="jobs.html">案件一覧</a>
+          <a href="contact.html">お問合せ</a>
+          <a href="company.html">会社概要</a>
+        </nav>
+        <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="メニューを開く">≡</button>
+      </div>
+      <nav class="mobile-menu" id="mobileMenu" aria-label="モバイルナビゲーション">
+        <a href="index.html">ユアハーツセミナーとは</a>
+        <a href="jobs.html">案件一覧</a>
+        <a href="contact.html">お問合せ</a>
+        <a href="company.html">会社概要</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="section-inner">
+          <p class="section-kicker">Contact</p>
+          <h1>お問合せ</h1>
+          <p>案件の確認、セミナー参加、紹介制度、SNS連携についてお気軽にご連絡ください。</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner contact-layout">
+          <div class="line-card reveal">
+            <p class="pill">SNS</p>
+            <h3>LINE / X でつながる</h3>
+            <p>LINEは個別相談や案件確認に、Xは発信・告知・SNS連携に利用予定です。</p>
+            <div class="social-actions">
+              <a class="button primary" data-line-link href="#" target="_blank" rel="noopener">LINEで相談する</a>
+              <a class="button secondary" data-x-link href="#" target="_blank" rel="noopener">Xを見る</a>
+            </div>
+          </div>
+          <form class="contact-form reveal" id="contactForm">
+            <h3>メールで問い合わせる</h3>
+            <div class="field">
+              <label for="name">お名前</label>
+              <input id="name" name="name" autocomplete="name" required placeholder="山田 太郎">
+            </div>
+            <div class="field">
+              <label for="email">メールアドレス</label>
+              <input id="email" name="email" type="email" autocomplete="email" required placeholder="example@email.com">
+            </div>
+            <div class="field">
+              <label for="message">お問い合わせ内容</label>
+              <textarea id="message" name="message" rows="7" required placeholder="ご質問・ご相談内容をご記入ください"></textarea>
+            </div>
+            <button class="save-button" type="submit">送信する</button>
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="brand" href="index.html"><img data-logo src="assets/your-hearts-logo.webp" alt="介護の総合スクール ユアハーツ"></a>
+        <div class="footer-links">
+          <a href="index.html">ユアハーツセミナーとは</a>
+          <a href="jobs.html">案件一覧</a>
+          <a href="company.html">会社概要</a>
+          <a data-line-link href="#" target="_blank" rel="noopener">LINE</a>
+          <a data-x-link href="#" target="_blank" rel="noopener">X</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
